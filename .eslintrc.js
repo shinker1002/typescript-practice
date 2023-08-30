@@ -16,8 +16,19 @@ module.exports = {
   rules: {
     'prettier/prettier': 0,
     "react/jsx-filename-extension":["warn",{"extensions":[".tsx"]}],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
   },
   settings: {
+    // Missing file extension "tsx" 에러 해결
     'import/resolver': {
       node: {
         extensions: [
