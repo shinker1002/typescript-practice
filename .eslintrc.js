@@ -16,6 +16,12 @@ module.exports = {
   rules: {
     'prettier/prettier': 0,
     "react/jsx-filename-extension":["warn",{"extensions":[".tsx"]}],
+    // 함수 컴포넌트 옵션
+    // Function component is not a function declaration Error
+    "react/function-component-definition": [
+      2,
+      { namedComponents: ["arrow-function", "function-declaration"] },
+    ],
     "import/extensions": [
       "error",
       "ignorePackages",
